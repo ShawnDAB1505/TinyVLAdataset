@@ -1,0 +1,24 @@
+# =============================================================================
+# DEPENDENCIES CHO PIPELINE VLA TRÊN UBUNTU (THUẦN ROS & RVIZ - KHÔNG CẦN PYBULLET)
+# =============================================================================
+
+# 1. Thư viện tính toán hình học, ma trận & xử lý ảnh cơ sở
+numpy>=1.21.0,<2.0.0
+scipy>=1.7.0
+opencv-python>=4.6.0
+matplotlib>=3.5.0
+
+# 2. Học sâu & Thị giác máy tính nhận diện vật thể (Tầng 2: YOLOE / SoM)
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0         # Chạy YOLOE / YOLO-World Open-Vocabulary Detection
+
+# 3. Kết nối & Suy luận Mô hình Thị giác - Ngôn ngữ Lớn (Tầng 1: VLM Qwen2.5-VL)
+openai>=1.0.0              # Gọi API chuẩn OpenAI / Ollama Local REST Endpoint
+requests>=2.28.0           # HTTP requests gọi Ollama (http://localhost:11434)
+
+# 4. Cầu nối Camera ngoài đời thực (dùng khi chạy song song ngoài đời với Intel RealSense)
+pyrealsense2>=2.50.0
+
+# Lưu ý: Các gói ROS & RViz sẽ cài trực tiếp qua apt trên Ubuntu:
+# sudo apt install ros-noetic-rviz ros-noetic-moveit ros-noetic-cv-bridge ros-noetic-visualization-msgs
